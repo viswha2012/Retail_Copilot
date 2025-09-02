@@ -1,0 +1,45 @@
+[
+    "Table superstore: This table contains transaction-level retail sales data. Each row represents a single order line, including order details, customer information, product information, and financial metrics such as sales, discounts, and profit. It is the central table for analyzing revenue, customer behavior, and product performance.",
+    
+    "Column row_id: An automatically generated integer index that uniquely identifies each row in the dataset. It has no business meaning but is useful for referencing records internally.",
+    
+    "Column order_id: A unique alphanumeric identifier assigned to each order. All rows with the same order_id belong to the same customer order, which may contain multiple products (order lines). Useful for grouping and analyzing multi-line orders.",
+    
+    "Column order_date: The calendar date when the customer placed the order (stored as a date type). This field is critical for time-series analysis such as daily, monthly, or yearly sales trends, revenue growth over time, or seasonality analysis.",
+    
+    "Column ship_date: The calendar date when the order was shipped to the customer. Useful for analyzing delivery times, fulfillment efficiency, and operational logistics.",
+    
+    "Column ship_mode: The shipping method selected for the order (e.g., Standard Class, Second Class, First Class, Same Day). Important for analyzing the relationship between shipping type, delivery time, and customer satisfaction or cost.",
+    
+    "Column customer_id: A unique identifier assigned to each customer. This allows linking multiple orders back to the same customer and performing customer-level analytics such as retention, segmentation, and lifetime value.",
+    
+    "Column customer_name: The full name of the customer who placed the order. Mostly descriptive, but can be used for reporting or validation.",
+    
+    "Column segment: The business market segment the customer belongs to (Consumer, Corporate, or Home Office). Useful for analyzing sales and profitability by customer type and for market segmentation analysis.",
+    
+    "Column country: The country where the customer is located. In this dataset it is always 'United States', but it provides geographic context for expansion or filtering.",
+    
+    "Column city: The city of the customer’s address. Enables regional-level sales analysis and geographic insights.",
+    
+    "Column state: The U.S. state where the customer is located. Useful for state-level sales analysis, performance dashboards, and geographic comparisons.",
+    
+    "Column postal_code: The ZIP or postal code of the customer. Can be used for detailed geographic clustering or mapping sales at the postal level.",
+    
+    "Column region: The broad U.S. geographic region (West, East, Central, South) where the order was placed. Often used for high-level geographic revenue comparisons and regional performance trends.",
+    
+    "Column product_id: A unique identifier for each product in the catalog. Useful for joining with product reference tables and analyzing sales at the product level.",
+    
+    "Column category: The top-level product category (Furniture, Office Supplies, Technology). Useful for analyzing revenue distribution across product lines.",
+    
+    "Column sub_category: A more specific breakdown of the product category (e.g., Chairs, Storage, Phones). Enables more detailed product sales analysis within categories.",
+    
+    "Column product_name: The descriptive name of the purchased product. Helpful for product-level reporting, but too granular for large-scale trend analysis.",
+    
+    "Column sales: The total sales revenue for this order line (in U.S. dollars). This is a key financial metric for analyzing revenue performance, growth trends, and product contribution. Often aggregated (SUM) for revenue reports.",
+    
+    "Column quantity: The number of units purchased for this product in the given order line. Useful for analyzing sales volume, demand patterns, and product popularity.",
+    
+    "Column discount: The discount applied to this order line as a fraction of sales. Useful for analyzing pricing strategy, promotions, and impact of discounts on revenue and profit.",
+    
+    "Column profit: The profit earned for this order line (in U.S. dollars), calculated as sales minus cost. A critical metric for profitability analysis across products, regions, and customer segments."
+]
